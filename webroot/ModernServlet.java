@@ -48,4 +48,8 @@ public class ModernServlet extends HttpServlet {
     out.println("</html>");
 
   }
+
+  public void service(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    doGet(req,res);
+  }
 }
