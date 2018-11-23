@@ -12,13 +12,13 @@ public class Test02 {
     File file = new File(path, "employee2.xml");
     Digester digester = new Digester();
     // add rules
-    digester.addObjectCreate("employee", "Employee");
+    digester.addObjectCreate("employee", "cxs15.pyrmont.digestertest.Employee");
     digester.addSetProperties("employee");    
-    digester.addObjectCreate("employee/office", "Office");
+    digester.addObjectCreate("employee/office", "cxs15.pyrmont.digestertest.Office");
     digester.addSetProperties("employee/office");
     digester.addSetNext("employee/office", "addOffice");
     digester.addObjectCreate("employee/office/address", 
-      "Address");
+      "cxs15.pyrmont.digestertest.Address");
     digester.addSetProperties("employee/office/address");
     digester.addSetNext("employee/office/address", "setAddress"); 
     try {
